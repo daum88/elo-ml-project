@@ -1,0 +1,71 @@
+{
+  "team_attack": {
+    "FA Tartu Kalev": 1.5160131504150314,
+    "FC Nomme U21": 1.7785640500656974,
+    "JK Tabasalu": 1.208802634705594,
+    "Johvi Phoenix": 2.4648233111630375,
+    "Kuressaare U21": 0.8366712996206058,
+    "L\u00e4\u00e4nemaa JK": 0.9515977577093442,
+    "Maardu LM": 2.095447447409223,
+    "Paide U21": 1.4656507642976677,
+    "TJK Legion": 1.5584435555846559,
+    "Trans Narva U21": 1.8387765651140477
+  },
+  "team_defense": {
+    "FA Tartu Kalev": 0.9193846696145735,
+    "FC Nomme U21": 0.9348922483657857,
+    "JK Tabasalu": 0.7844294529632108,
+    "Johvi Phoenix": 1.2878120732728116,
+    "Kuressaare U21": 1.5078772961321405,
+    "L\u00e4\u00e4nemaa JK": 1.6876174475701746,
+    "Maardu LM": 0.5796513156391532,
+    "Paide U21": 1.5519817119547334,
+    "TJK Legion": 1.1269217992544063,
+    "Trans Narva U21": 0.6439918719352388
+  },
+  "poisson_home_adv": true,
+  "nb_dispersion": 9.76100010918222,
+  "trueskill": {
+    "FA Tartu Kalev": {
+      "mu": 25.0,
+      "sigma": 8.333333333333334
+    },
+    "FC Nomme U21": {
+      "mu": 25.0,
+      "sigma": 8.333333333333334
+    },
+    "JK Tabasalu": {
+      "mu": 25.0,
+      "sigma": 8.333333333333334
+    },
+    "Johvi Phoenix": {
+      "mu": 25.0,
+      "sigma": 8.333333333333334
+    },
+    "Kuressaare U21": {
+      "mu": 25.0,
+      "sigma": 8.333333333333334
+    },
+    "L\u00e4\u00e4nemaa JK": {
+      "mu": 25.0,
+      "sigma": 8.333333333333334
+    },
+    "Maardu LM": {
+      "mu": 25.0,
+      "sigma": 8.333333333333334
+    },
+    "Paide U21": {
+      "mu": 25.0,
+      "sigma": 8.333333333333334
+    },
+    "TJK Legion": {
+      "mu": 25.0,
+      "sigma": 8.333333333333334
+    },
+    "Trans Narva U21": {
+      "mu": 25.0,
+      "sigma": 8.333333333333334
+    }
+  },
+  "tau_days": 60
+}

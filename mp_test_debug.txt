@@ -1,0 +1,5 @@
+[WORKER] Started with x=3
+[WORKER] Started with x=1
+[WORKER] Started with x=2
+[WORKER] Started with x=4
+[MAIN] Pool results: [1, 4, 9, 16]
