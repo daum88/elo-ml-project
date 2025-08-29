@@ -1,1 +1,0 @@
-# elo_sim package
