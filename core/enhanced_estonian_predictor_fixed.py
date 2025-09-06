@@ -14,6 +14,7 @@ import csv
 import re
 import pandas as pd
 import numpy as np
+import os
 from datetime import datetime, timedelta
 from collections import defaultdict, deque
 from typing import Dict, List, Optional, Tuple, Any
@@ -227,7 +228,10 @@ class EnhancedEstonianPredictor:
             # Process Esiliiga 2025 results
             try:
                 print("  📁 Processing esiliiga2025.csv...")
-                esiliiga_df = pd.read_csv('esiliiga2025.csv')
+                # Get the directory where this script is located
+                script_dir = os.path.dirname(os.path.abspath(__file__))
+                esiliiga_path = os.path.join(script_dir, 'esiliiga2025.csv')
+                esiliiga_df = pd.read_csv(esiliiga_path)
                 matches_processed += self._process_match_results(esiliiga_df, "Esiliiga")
             except Exception as e:
                 print(f"  ⚠️ Error reading esiliiga2025.csv: {e}")
@@ -235,7 +239,9 @@ class EnhancedEstonianPredictor:
             # Process Esiliiga B 2025 results
             try:
                 print("  📁 Processing esiliigab2025.csv...")
-                esiliiga_b_df = pd.read_csv('esiliigab2025.csv')
+                script_dir = os.path.dirname(os.path.abspath(__file__))
+                esiliiga_b_path = os.path.join(script_dir, 'esiliigab2025.csv')
+                esiliiga_b_df = pd.read_csv(esiliiga_b_path)
                 matches_processed += self._process_match_results(esiliiga_b_df, "Esiliiga B")
             except Exception as e:
                 print(f"  ⚠️ Error reading esiliigab2025.csv: {e}")
@@ -392,7 +398,7 @@ class EnhancedEstonianPredictor:
         print(f"✅ Initialized dynamic characteristics for {len(self.teams)} teams")
             
     def calculate_expected_goals(self, home_team: str, away_team: str) -> Tuple[float, float]:
-        """Calculate expected goals using team characteristics and ELO"""
+        """Calculate expected goals using team characteristics and ELO with realistic dominance for large gaps"""
         home_elo = self.elo_ratings.get(home_team, 1500)
         away_elo = self.elo_ratings.get(away_team, 1500)
         
@@ -400,32 +406,62 @@ class EnhancedEstonianPredictor:
         home_chars = self.performance_tracker.get_team_characteristics(home_team)
         away_chars = self.performance_tracker.get_team_characteristics(away_team)
         
-        # Base expected goals from ELO difference
+        # Calculate ELO difference
         elo_diff = home_elo - away_elo
-        base_home_goals = 1.3 + (elo_diff / 400) * 0.5
-        base_away_goals = 1.1 - (elo_diff / 400) * 0.3
         
-        # Apply dynamic characteristics
-        home_attacking = home_chars.get('attacking_home', 1.0)
-        home_defensive = home_chars.get('defensive_home', 1.0)
-        home_advantage = home_chars.get('home_advantage', 1.1)
-        home_form = home_chars.get('form', 0.0)
+        # For massive ELO differences (300+ points), create CONSISTENT dominance
+        if abs(elo_diff) >= 300:
+            if elo_diff >= 300:
+                # Home team massively superior - should dominate consistently
+                base_home_goals = 2.8 + random.uniform(0.0, 0.4)  # 2.8-3.2 goals (tight range)
+                base_away_goals = 0.5 + random.uniform(0.0, 0.3)  # 0.5-0.8 goals (tight range)
+            else:
+                # Away team massively superior
+                base_away_goals = 2.8 + random.uniform(0.0, 0.4)  # 2.8-3.2 goals  
+                base_home_goals = 0.5 + random.uniform(0.0, 0.3)  # 0.5-0.8 goals
+        else:
+            # Normal ELO calculation for smaller differences
+            # Cap ELO difference to prevent unrealistic scores for mid-range gaps
+            capped_diff = max(-250, min(250, elo_diff))  # Limit to ±250 points
+            
+            base_home_goals = 1.2 + (capped_diff / 400) * 0.4  # Reduced multiplier
+            base_away_goals = 1.0 - (capped_diff / 400) * 0.25  # Reduced multiplier
         
-        away_attacking = away_chars.get('attacking_away', 1.0)
-        away_defensive = away_chars.get('defensive_away', 1.0)
-        away_form = away_chars.get('form', 0.0)
+        # Apply dynamic characteristics with limits (only for non-massive gaps)
+        if abs(elo_diff) < 300:
+            home_attacking = home_chars.get('attacking_home', 1.0)
+            home_defensive = home_chars.get('defensive_home', 1.0)
+            home_advantage = home_chars.get('home_advantage', 1.1)
+            home_form = home_chars.get('form', 0.0)
+            
+            away_attacking = away_chars.get('attacking_away', 1.0)
+            away_defensive = away_chars.get('defensive_away', 1.0)
+            away_form = away_chars.get('form', 0.0)
+            
+            # Limit multiplicative factors to prevent unrealistic scores
+            home_attacking_capped = max(0.7, min(1.4, home_attacking))  # ±40% max
+            away_attacking_capped = max(0.7, min(1.4, away_attacking))
+            home_defensive_capped = max(0.7, min(1.4, home_defensive))
+            away_defensive_capped = max(0.7, min(1.4, away_defensive))
+            home_advantage_capped = max(1.0, min(1.2, home_advantage))  # Max 20% advantage
+            
+            # Form impact limited
+            home_form_impact = max(-0.15, min(0.15, home_form * 0.1))  # ±15% max
+            away_form_impact = max(-0.15, min(0.15, away_form * 0.1))
+            
+            # Calculate final expected goals with realistic bounds
+            home_expected = base_home_goals * home_attacking_capped * home_advantage_capped * (1 + home_form_impact) / away_defensive_capped
+            away_expected = base_away_goals * away_attacking_capped * (1 + away_form_impact) / home_defensive_capped
+        else:
+            # For massive gaps, ignore dynamic factors - the ELO gap is too large
+            home_expected = base_home_goals
+            away_expected = base_away_goals
         
-        # Calculate final expected goals with bounded defensive values
-        # Ensure defensive values are reasonable (0.5 to 2.0 range)
-        home_defensive_bounded = max(0.5, min(2.0, home_defensive))
-        away_defensive_bounded = max(0.5, min(2.0, away_defensive))
+        # Final realistic bounds - Estonian football typically 0.5-3.5 goals per team
+        home_expected = max(0.3, min(4.0, home_expected))  # Allow up to 4 for dominant teams
+        away_expected = max(0.3, min(3.0, away_expected))
         
-        # Home goals = home attack * home advantage * home form, reduced by away defense
-        home_expected = base_home_goals * home_attacking * home_advantage * (1 + home_form * 0.1) / away_defensive_bounded
-        # Away goals = away attack * away form, reduced by home defense  
-        away_expected = base_away_goals * away_attacking * (1 + away_form * 0.1) / home_defensive_bounded
-        
-        return max(0.1, home_expected), max(0.1, away_expected)
+        return home_expected, away_expected
         
     def enhanced_match_probability(self, home_team: str, away_team: str) -> Tuple[float, float, float]:
         """
@@ -466,8 +502,10 @@ class EnhancedEstonianPredictor:
         return home_win/total, draw/total, away_win/total
         
     def poisson_goals(self, expected_goals: float) -> int:
-        """Generate goals using Poisson distribution"""
-        return np.random.poisson(expected_goals)
+        """Generate goals using capped Poisson distribution for realistic scores"""
+        goals = np.random.poisson(expected_goals)
+        # Cap extreme results to prevent unrealistic scorelines
+        return min(goals, 6)  # Maximum 6 goals per team
         
     def simulate_match_with_scoreline(self, home_team: str, away_team: str, update_dynamics: bool = False) -> Tuple[int, int, str]:
         """

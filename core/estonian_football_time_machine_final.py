@@ -6,10 +6,18 @@ Fixes all issues:
 - ALL teams get proper dynamic characteristics (no more 1.00x defaults)
 - Correct league assignments based on actual Estonian structure  
 - Working dynamic characteristics display in match simulation
-- Realistic ELO variance and team performance
-"""
-
-import tkinter as tk
+- Realistic ELO variance and team perform        # League selection for season simulation
+        league_frame = ttk.LabelFrame(controls_frame, text="League Selection", padding="5")
+        league_frame.grid(row=1, column=0, columnspan=3, sticky="we", pady=5)
+        
+        ttk.Label(league_frame, text="Simulate:").grid(row=0, column=0, sticky=tk.W, padx=(0, 10))
+        self.league_selection = tk.StringVar(value="Both Leagues")
+        league_combo = ttk.Combobox(league_frame, textvariable=self.league_selection, 
+                                  values=["Esiliiga Only", "Esiliiga B Only", "Both Leagues"],
+                                  state="readonly", width=15)
+        league_combo.grid(row=0, column=1, padx=(0, 10))
+        
+        ttk.Label(controls_frame, text="Seasons to simulate:").grid(row=0, column=0, sticky=tk.W, padx=(0, 10))port tkinter as tk
 from tkinter import ttk, messagebox, scrolledtext
 import pandas as pd
 import numpy as np
@@ -268,7 +276,16 @@ class EstonianFootballTimeMachineComplete:
         
         simulate_btn = ttk.Button(sim_frame, text="Simulate Match", 
                                 command=self.simulate_match)
-        simulate_btn.grid(row=0, column=2)
+        # Date selection for historical simulation
+        date_frame = ttk.LabelFrame(sim_frame, text="Historical Match Simulation", padding="5")
+        date_frame.grid(row=1, column=0, columnspan=3, sticky="we", pady=5)
+        
+        ttk.Label(date_frame, text="Simulate at date:").grid(row=0, column=0, sticky=tk.W)
+        self.match_date = tk.StringVar(value="2025-08-29")
+        date_entry = ttk.Entry(date_frame, textvariable=self.match_date, width=12)
+        date_entry.grid(row=0, column=1, padx=5)
+        
+        ttk.Label(date_frame, text="(YYYY-MM-DD)").grid(row=0, column=2, sticky=tk.W)
         
         # Results area
         results_frame = ttk.LabelFrame(match_frame, text="Results", padding="10")
@@ -342,6 +359,17 @@ class EstonianFootballTimeMachineComplete:
         # Simulation controls
         controls_frame = ttk.LabelFrame(season_frame, text="Season Simulation Controls", padding="10")
         controls_frame.pack(fill=tk.X, padx=10, pady=5)
+        
+        # League selection for season simulation
+        league_frame = ttk.LabelFrame(controls_frame, text="League Selection", padding="5")
+        league_frame.grid(row=1, column=0, columnspan=3, sticky=(tk.W, tk.E), pady=5)
+        
+        ttk.Label(league_frame, text="Simulate:").grid(row=0, column=0, sticky=tk.W, padx=(0, 10))
+        self.league_selection = tk.StringVar(value="Both Leagues")
+        league_combo = ttk.Combobox(league_frame, textvariable=self.league_selection, 
+                                  values=["Esiliiga Only", "Esiliiga B Only", "Both Leagues"],
+                                  state="readonly", width=15)
+        league_combo.grid(row=0, column=1, padx=(0, 10))
         
         ttk.Label(controls_frame, text="Seasons to simulate:").grid(row=0, column=0, sticky=tk.W, padx=(0, 10))
         self.season_count_var = tk.StringVar(value="100")
