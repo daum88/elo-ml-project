@@ -1,0 +1,181 @@
+Date,Home,Result,Away
+2019-03-08,Nõmme Kalju FC,0:2,Paide Linnameeskond
+2019-03-09,Tallinna FCI Levadia,5:1,JK Tallinna Kalev
+2019-03-09,JK Narva Trans,0:0,FC Kuressaare
+2019-03-10,Tartu JK Tammeka,2:2,Maardu Linnameeskond
+2019-03-10,Tallinna FC Flora,2:0,Viljandi JK Tulevik
+2019-03-16,Viljandi JK Tulevik,0:4,Tartu JK Tammeka
+2019-03-16,FC Kuressaare,0:1,Tallinna FCI Levadia
+2019-03-16,JK Tallinna Kalev,0:4,JK Narva Trans
+2019-03-17,Paide Linnameeskond,0:1,Tallinna FC Flora
+2019-03-17,Maardu Linnameeskond,0:5,Nõmme Kalju FC
+2019-03-30,Tallinna FC Flora,4:1,Tartu JK Tammeka
+2019-03-30,Paide Linnameeskond,2:0,JK Tallinna Kalev
+2019-03-30,JK Narva Trans,0:0,Nõmme Kalju FC
+2019-03-31,Viljandi JK Tulevik,1:2,FC Kuressaare
+2019-03-31,Tallinna FCI Levadia,8:0,Maardu Linnameeskond
+2019-04-02,Tartu JK Tammeka,0:3,Paide Linnameeskond
+2019-04-02,Nõmme Kalju FC,0:3,Tallinna FC Flora
+2019-04-03,Maardu Linnameeskond,1:0,FC Kuressaare
+2019-04-03,JK Narva Trans,1:2,Tallinna FCI Levadia
+2019-04-03,JK Tallinna Kalev,0:2,Viljandi JK Tulevik
+2019-04-06,Paide Linnameeskond,0:0,JK Narva Trans
+2019-04-07,Viljandi JK Tulevik,2:3,Nõmme Kalju FC
+2019-04-07,FC Kuressaare,2:0,JK Tallinna Kalev
+2019-04-07,Tartu JK Tammeka,1:2,Tallinna FCI Levadia
+2019-04-07,Tallinna FC Flora,6:0,Maardu Linnameeskond
+2019-04-13,Tallinna FCI Levadia,5:2,Viljandi JK Tulevik
+2019-04-13,JK Tallinna Kalev,2:0,Maardu Linnameeskond
+2019-04-13,JK Narva Trans,0:1,Tallinna FC Flora
+2019-04-14,FC Kuressaare,0:1,Paide Linnameeskond
+2019-04-14,Nõmme Kalju FC,2:0,Tartu JK Tammeka
+2019-04-20,Nõmme Kalju FC,2:2,JK Tallinna Kalev
+2019-04-20,Maardu Linnameeskond,0:0,Viljandi JK Tulevik
+2019-04-20,Tartu JK Tammeka,1:2,JK Narva Trans
+2019-04-21,Paide Linnameeskond,0:2,Tallinna FCI Levadia
+2019-04-21,Tallinna FC Flora,5:0,FC Kuressaare
+2019-04-27,JK Tallinna Kalev,0:4,Tartu JK Tammeka
+2019-04-27,FC Kuressaare,0:0,Nõmme Kalju FC
+2019-04-27,Maardu Linnameeskond,0:1,JK Narva Trans
+2019-04-28,Viljandi JK Tulevik,2:2,Paide Linnameeskond
+2019-04-28,Tallinna FCI Levadia,1:2,Tallinna FC Flora
+2019-05-03,Tartu JK Tammeka,1:1,FC Kuressaare
+2019-05-03,Tallinna FC Flora,6:0,JK Tallinna Kalev
+2019-05-04,Paide Linnameeskond,2:0,Maardu Linnameeskond
+2019-05-04,JK Narva Trans,0:1,Viljandi JK Tulevik
+2019-05-05,Nõmme Kalju FC,2:1,Tallinna FCI Levadia
+2019-05-10,FC Kuressaare,1:0,Maardu Linnameeskond
+2019-05-11,Tallinna FCI Levadia,7:0,Tartu JK Tammeka
+2019-05-11,JK Narva Trans,0:1,Paide Linnameeskond
+2019-05-12,JK Tallinna Kalev,0:1,Nõmme Kalju FC
+2019-05-12,Viljandi JK Tulevik,1:3,Tallinna FC Flora
+2019-05-17,Nõmme Kalju FC,3:2,FC Kuressaare
+2019-05-17,Viljandi JK Tulevik,0:3,Tallinna FCI Levadia
+2019-05-18,Tallinna FC Flora,2:2,JK Narva Trans
+2019-05-18,Paide Linnameeskond,2:1,Tartu JK Tammeka
+2019-05-19,Maardu Linnameeskond,0:0,JK Tallinna Kalev
+2019-05-21,Tallinna FCI Levadia,0:0,Nõmme Kalju FC
+2019-05-22,Tartu JK Tammeka,0:2,Tallinna FC Flora
+2019-05-22,JK Narva Trans,5:1,Maardu Linnameeskond
+2019-05-24,JK Tallinna Kalev,0:3,Paide Linnameeskond
+2019-05-24,FC Kuressaare,1:0,Viljandi JK Tulevik
+2019-05-28,Viljandi JK Tulevik,1:1,JK Narva Trans
+2019-05-28,JK Tallinna Kalev,3:0,FC Kuressaare
+2019-05-28,Maardu Linnameeskond,2:1,Tartu JK Tammeka
+2019-05-28,Paide Linnameeskond,0:2,Nõmme Kalju FC
+2019-05-29,Tallinna FC Flora,1:3,Tallinna FCI Levadia
+2019-06-01,Tartu JK Tammeka,0:1,Viljandi JK Tulevik
+2019-06-01,Nõmme Kalju FC,6:0,Maardu Linnameeskond
+2019-06-02,Tallinna FCI Levadia,1:1,Paide Linnameeskond
+2019-06-02,FC Kuressaare,0:4,Tallinna FC Flora
+2019-05-31,JK Narva Trans,2:2,JK Tallinna Kalev
+2019-06-14,JK Tallinna Kalev,1:6,Tallinna FCI Levadia
+2019-06-14,Paide Linnameeskond,6:0,Viljandi JK Tulevik
+2019-06-15,Maardu Linnameeskond,3:8,Tallinna FC Flora
+2019-06-15,Nõmme Kalju FC,3:2,JK Narva Trans
+2019-06-15,FC Kuressaare,1:1,Tartu JK Tammeka
+2019-06-18,Viljandi JK Tulevik,2:0,Maardu Linnameeskond
+2019-06-18,Tartu JK Tammeka,2:0,JK Tallinna Kalev
+2019-06-18,Tallinna FC Flora,0:1,Nõmme Kalju FC
+2019-06-19,Paide Linnameeskond,7:0,FC Kuressaare
+2019-06-19,Tallinna FCI Levadia,2:0,JK Narva Trans
+2019-06-21,JK Tallinna Kalev,0:2,Tallinna FC Flora
+2019-06-22,Nõmme Kalju FC,2:1,Viljandi JK Tulevik
+2019-06-22,Maardu Linnameeskond,1:4,Paide Linnameeskond
+2019-06-22,JK Narva Trans,2:5,Tartu JK Tammeka
+2019-06-22,Tallinna FCI Levadia,5:0,FC Kuressaare
+2019-06-28,Tartu JK Tammeka,0:0,Nõmme Kalju FC
+2019-06-29,Maardu Linnameeskond,1:6,Tallinna FCI Levadia
+2019-06-29,FC Kuressaare,1:1,JK Narva Trans
+2019-06-30,Tallinna FC Flora,4:1,Paide Linnameeskond
+2019-06-30,Viljandi JK Tulevik,1:2,JK Tallinna Kalev
+2019-07-05,Paide Linnameeskond,6:1,FC Kuressaare
+2019-07-05,JK Narva Trans,1:1,Nõmme Kalju FC
+2019-07-06,Tallinna FCI Levadia,1:2,Tallinna FC Flora
+2019-07-06,Viljandi JK Tulevik,0:1,Tartu JK Tammeka
+2019-07-07,JK Tallinna Kalev,1:4,Maardu Linnameeskond
+2019-07-19,Nõmme Kalju FC,1:1,Paide Linnameeskond
+2019-07-20,Tartu JK Tammeka,2:2,JK Tallinna Kalev
+2019-07-21,FC Kuressaare,0:3,Tallinna FCI Levadia
+2019-07-21,Tallinna FC Flora,3:0,Maardu Linnameeskond
+2019-07-21,JK Narva Trans,3:2,Viljandi JK Tulevik
+2019-08-13,FC Kuressaare,0:3,Tallinna FC Flora
+2019-09-24,JK Tallinna Kalev,2:3,Nõmme Kalju FC
+2019-07-26,Paide Linnameeskond,2:0,Tartu JK Tammeka
+2019-07-27,Maardu Linnameeskond,1:3,JK Narva Trans
+2019-07-28,Viljandi JK Tulevik,0:3,Tallinna FCI Levadia
+2019-08-02,Tartu JK Tammeka,2:0,Maardu Linnameeskond
+2019-08-03,Paide Linnameeskond,1:0,JK Narva Trans
+2019-08-03,Tallinna FCI Levadia,7:0,JK Tallinna Kalev
+2019-08-03,Nõmme Kalju FC,7:2,FC Kuressaare
+2019-09-25,Tallinna FC Flora,3:0,Viljandi JK Tulevik
+2019-10-01,Maardu Linnameeskond,1:4,Nõmme Kalju FC
+2019-08-09,FC Kuressaare,0:1,JK Tallinna Kalev
+2019-08-09,Tallinna FC Flora,0:1,Tartu JK Tammeka
+2019-08-10,JK Narva Trans,1:3,Tallinna FCI Levadia
+2019-08-11,Viljandi JK Tulevik,1:2,Paide Linnameeskond
+2019-08-16,JK Tallinna Kalev,0:2,Tallinna FC Flora
+2019-08-16,Tartu JK Tammeka,6:4,JK Narva Trans
+2019-08-17,Maardu Linnameeskond,2:1,FC Kuressaare
+2019-08-17,Tallinna FCI Levadia,3:2,Paide Linnameeskond
+2019-08-18,Nõmme Kalju FC,2:2,Viljandi JK Tulevik
+2019-08-23,FC Kuressaare,0:1,Tartu JK Tammeka
+2019-08-24,Nõmme Kalju FC,2:1,Tallinna FCI Levadia
+2019-08-24,JK Narva Trans,0:1,Tallinna FC Flora
+2019-08-25,Viljandi JK Tulevik,1:1,JK Tallinna Kalev
+2019-08-25,Paide Linnameeskond,5:0,Maardu Linnameeskond
+2019-08-27,Tartu JK Tammeka,1:1,Tallinna FCI Levadia
+2019-08-28,JK Narva Trans,4:2,FC Kuressaare
+2019-08-28,Maardu Linnameeskond,2:2,Viljandi JK Tulevik
+2019-08-28,JK Tallinna Kalev,0:2,Paide Linnameeskond
+2019-08-28,Tallinna FC Flora,1:1,Nõmme Kalju FC
+2019-09-01,Viljandi JK Tulevik,3:0,FC Kuressaare
+2019-09-01,Paide Linnameeskond,1:1,Tallinna FC Flora
+2019-09-01,Tallinna FCI Levadia,3:1,Maardu Linnameeskond
+2019-08-31,JK Tallinna Kalev,0:3,JK Narva Trans
+2019-08-31,Tartu JK Tammeka,1:2,Nõmme Kalju FC
+2019-09-13,Tallinna FC Flora,5:0,JK Tallinna Kalev
+2019-09-14,Tallinna FCI Levadia,1:1,Viljandi JK Tulevik
+2019-09-14,FC Kuressaare,0:3,Paide Linnameeskond
+2019-09-14,Nõmme Kalju FC,2:2,JK Narva Trans
+2019-09-15,Maardu Linnameeskond,0:1,Tartu JK Tammeka
+2019-09-17,Viljandi JK Tulevik,0:3,Nõmme Kalju FC
+2019-09-17,JK Tallinna Kalev,2:1,FC Kuressaare
+2019-09-18,JK Narva Trans,3:2,Tartu JK Tammeka
+2019-09-18,Maardu Linnameeskond,2:4,Paide Linnameeskond
+2019-09-18,Tallinna FC Flora,2:1,Tallinna FCI Levadia
+2019-09-21,Nõmme Kalju FC,6:0,JK Tallinna Kalev
+2019-09-21,Tallinna FCI Levadia,1:0,JK Narva Trans
+2019-09-21,Paide Linnameeskond,4:0,Viljandi JK Tulevik
+2019-09-22,FC Kuressaare,1:0,Maardu Linnameeskond
+2019-09-22,Tartu JK Tammeka,1:6,Tallinna FC Flora
+2019-09-28,JK Tallinna Kalev,0:1,Tallinna FCI Levadia
+2019-09-28,Nõmme Kalju FC,4:0,Maardu Linnameeskond
+2019-09-29,Tartu JK Tammeka,4:0,FC Kuressaare
+2019-09-29,JK Narva Trans,0:1,Paide Linnameeskond
+2019-09-29,Viljandi JK Tulevik,0:3,Tallinna FC Flora
+2019-10-05,FC Kuressaare,4:1,Viljandi JK Tulevik
+2019-10-05,Maardu Linnameeskond,2:2,JK Tallinna Kalev
+2019-10-05,Tallinna FC Flora,1:0,JK Narva Trans
+2019-10-06,Paide Linnameeskond,0:1,Nõmme Kalju FC
+2019-10-06,Tallinna FCI Levadia,1:1,Tartu JK Tammeka
+2019-10-19,JK Narva Trans,5:2,Maardu Linnameeskond
+2019-10-19,Tallinna FCI Levadia,2:1,FC Kuressaare
+2019-10-19,Paide Linnameeskond,2:1,JK Tallinna Kalev
+2019-10-20,Tartu JK Tammeka,1:3,Viljandi JK Tulevik
+2019-10-20,Nõmme Kalju FC,2:1,Tallinna FC Flora
+2019-10-26,Viljandi JK Tulevik,0:2,JK Narva Trans
+2019-10-26,JK Tallinna Kalev,1:2,Tartu JK Tammeka
+2019-10-26,Maardu Linnameeskond,1:4,Tallinna FCI Levadia
+2019-10-27,Tallinna FC Flora,1:0,Paide Linnameeskond
+2019-10-28,FC Kuressaare,0:3,Nõmme Kalju FC
+2019-11-02,JK Narva Trans,2:0,JK Tallinna Kalev
+2019-11-02,Tallinna FCI Levadia,1:1,Nõmme Kalju FC
+2019-11-03,Viljandi JK Tulevik,2:1,Maardu Linnameeskond
+2019-11-03,Tartu JK Tammeka,3:2,Paide Linnameeskond
+2019-11-03,Tallinna FC Flora,7:0,FC Kuressaare
+2019-11-09,FC Kuressaare,0:1,JK Narva Trans
+2019-11-09,Maardu Linnameeskond,0:12,Tallinna FC Flora
+2019-11-09,Nõmme Kalju FC,2:3,Tartu JK Tammeka
+2019-11-09,Paide Linnameeskond,3:1,Tallinna FCI Levadia
+2019-11-09,JK Tallinna Kalev,3:0,Viljandi JK Tulevik
