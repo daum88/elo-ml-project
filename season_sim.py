@@ -12,7 +12,7 @@ class SeasonSimulator:
         self.loader = DataLoader()
         for fn, lg in [('premium_liiga','PL'),('esiliiga','ESL'),('esiliiga_b','ESB')]:
             for yr in ['2022','2023','2024','2025']:
-                self.loader.load_csv(f'{fn}_{yr}.csv', lg)
+                self.loader.load_csv(f'data/{fn}_{yr}.csv', lg)
 
         self.all_matches = self.loader.sorted_matches()
         self.all_matches = [m for m in self.all_matches if m['date'].year >= 2022]
